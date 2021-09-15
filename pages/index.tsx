@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Footer from "../components/footer";
-import NextTutorial from "../components/nextTutorial";
+import Table from "../components/table";
+// import NextTutorial from "../components/nextTutorial";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <NextTutorial />
+        {/* <NextTutorial /> */}
+        <h1 className={styles.title}>Welcome to Chatroom!</h1>
+        <Table />
       </main>
 
       <Footer />
