@@ -19,20 +19,10 @@ const Register: React.FC<Props> = () => {
       }}
     >
       <Form>
-        {/* <label htmlFor="username">Username: </label>
-        <Field id="username" name="username" placeholder="Username" />
-         */}
-         <TextInput label="username"
-            name="username"
-            type="text"
-            placeholder="username"/>
-        <label htmlFor="password">Password: </label>
-        <Field id="password" name="password" placeholder="Password" />
-        <label htmlFor="confirm">Confirm Password: </label>
-        <Field id="confirm" name="confirm" placeholder="Confirm Password" />
-        <label htmlFor="email">Email: </label>
-        <Field id="email" name="email" placeholder="email" />
-
+        <TextInput label="Username" name="username" type="text" placeholder="username" />
+        <TextInput label="Password" name="password" type="text" placeholder="password" />
+        <TextInput label="Confirm" name="confirm" type="text" placeholder="confirm" />
+        <TextInput label="Email" name="email" type="text" placeholder="email" />
         <button className="btn" type="submit">
           Submit
         </button>
