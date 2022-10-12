@@ -4,12 +4,10 @@ import TextInput from "../components/textInput";
 interface FormValues {
   username: string;
   password: string;
-  confirm: string;
-  email: string;
 }
 
-const Register = () => {
-  const initialValues: FormValues = { username: "", password: "", confirm: "", email: "" };
+const Login = () => {
+  const initialValues: FormValues = { username: "", password: "" };
   return (
     <Formik
       initialValues={initialValues}
@@ -22,8 +20,6 @@ const Register = () => {
       <Form>
         <TextInput label="Username" name="username" type="text" placeholder="username" />
         <TextInput label="Password" name="password" type="password" placeholder="password" />
-        <TextInput label="Confirm" name="confirm" type="password" placeholder="confirm" />
-        <TextInput label="Email" name="email" type="email" placeholder="email" />
         <button className="btn" type="submit">
           Submit
         </button>
@@ -31,4 +27,4 @@ const Register = () => {
     </Formik>
   );
 };
-export default Register;
+export default Login;
