@@ -33,11 +33,11 @@ const Sidebar = () => {
       <h2>分類</h2>
       {_.map(categories, (category) => {
         return (
-          <div>
+          <div key={category.id}>
             <h3>{category.name}</h3>
             <ul>
               {_.map(category.boards, (board) => {
-                return <li>{board.name}</li>;
+                return <li key={board.id}>{board.name}</li>;
               })}
             </ul>
           </div>

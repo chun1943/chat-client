@@ -1,10 +1,10 @@
 import Sidebar from "../components/sidebar";
 
-const Hall = () => {
+const Dashboard = () => {
   return (
     <>
       <Sidebar />
     </>
   );
 };
-export default Hall;
+export default Dashboard;
