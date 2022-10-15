@@ -1,12 +1,18 @@
+import styled from "styled-components";
 import Hall from "../components/hall";
 import Sidebar from "../components/sidebar";
 
+const Row = styled.div`
+  display: flex;
+  /* flex-direction: row; */
+`;
+
 const Dashboard = () => {
   return (
-    <div>
+    <Row>
       <Sidebar />
       <Hall />
-    </div>
+    </Row> 
   );
 };
 export default Dashboard;
