@@ -4,12 +4,13 @@ import Sidebar from "../components/sidebar";
 
 const Row = styled.div`
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
+  /* background-color: red; */
 `;
 
 const Dashboard = () => {
   return (
-    <Row>
+    <Row className="row">
       <Sidebar />
       <Hall />
     </Row> 
