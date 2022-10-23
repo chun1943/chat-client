@@ -1,6 +1,12 @@
 import { Form, Formik } from "formik";
+import { useEffect } from "react";
+import { useQuery } from "urql";
 import TextInput from "../components/textInput";
-
+const HelloQuery = `
+  query {
+    hello
+  }
+`;
 interface FormValues {
   username: string;
   password: string;
@@ -8,6 +14,13 @@ interface FormValues {
 
 const Login = () => {
   const initialValues: FormValues = { username: "", password: "" };
+  const [result, execute] = useQuery({
+    query: HelloQuery,
+  });
+
+  useEffect(() => {
+    console.log(result.data);
+  }, [result]);
   return (
     <Formik
       initialValues={initialValues}
@@ -15,6 +28,7 @@ const Login = () => {
         console.log({ values, actions });
         alert(JSON.stringify(values, null, 2));
         actions.setSubmitting(false);
+        execute();
       }}
     >
       <Form>
